@@ -97,11 +97,11 @@ def handler_text(message):
 			for row in  get_users_deposits: # Вывод вкладов по одному
 				if row[1] == '1' or row[2] == '1' or row[3] == '1':
 					if row[1] == '1':
-						bot.send_message(config.admin, 'Тип вклада - Бронзовый\nID пользователя - {}\nДата активации вклада - {}\nДата окончания вклада - {}\nСумма вклада - {}({})'.format(row[0], row[4], row[7], row[10], int(int(row[10])*1.1)))
+						bot.send_message(config.admin, 'Тип вклада - Бронзовый\nID пользователя - {}\nДата активации вклада - {}\nДата окончания вклада - {}\nСумма вклада - {}'.format(row[0], row[4], row[7], row[10]))
 					if row[2] == '1':
-						bot.send_message(config.admin, 'Тип вклада - Серебряный\nID пользователя - {}\nДата активации вклада - {}\nДата окончания вклада - {}\nСумма вклада - {}({})'.format(row[0], row[5], row[8], row[11], int(int(row[11])*1.25)))
+						bot.send_message(config.admin, 'Тип вклада - Серебряный\nID пользователя - {}\nДата активации вклада - {}\nДата окончания вклада - {}\nСумма вклада - {}'.format(row[0], row[5], row[8], row[11]))
 					if row[3] == '1':
-						bot.send_message(config.admin, 'Тип вклада - Золотой\nID пользователя - {}\nДата активации вклада - {}\nДата окончания вклада - {}\nСумма вклада - {}({})'.format(row[0], row[6], row[9], row[12], int(int(row[12])*1.5)))
+						bot.send_message(config.admin, 'Тип вклада - Золотой\nID пользователя - {}\nДата активации вклада - {}\nДата окончания вклада - {}\nСумма вклада - {}'.format(row[0], row[6], row[9], row[12]))
 				else:
 					bot.send_message(config.admin, 'Активных вкладов не имеется :(')
 
